@@ -41,6 +41,39 @@ app.get('/books', async (req, res) => {
         res.status(500).json({ message: 'Server error' });
     }
 });
+app.put('/books/:id', async (req, res) => {
+    const { id } = req.params;
+    const updatedBookData = req.body;
+
+    try {
+        const updatedBook = await Book.findByIdAndUpdate(id, updatedBookData, { new: true });
+        res.json(updatedBook);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+app.delete('/books/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        await Book.findByIdAndDelete(id);
+        res.json({ message: 'Book deleted successfully' });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+app.get('/books/search', async (req, res) => {
+    const { query } = req.query;
+
+    try {
+        const books = await Book.find({ title: { $regex: query, $options: 'i' } });
+        res.json(books);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 
 const PORT = 4000;
 app.listen(PORT, () => {
