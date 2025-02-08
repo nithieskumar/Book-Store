@@ -1,0 +1,76 @@
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+nav {
+    background-color: #666;
+    color: #fff;
+    padding: 30px;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 60px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+#searchInput{
+    width: 95%;
+    height: 1px;
+    padding: 12px 20px;
+    margin-top: 40px;   
+    margin-left: 10px; 
+    box-sizing: border-box;
+}
+        form {
+            margin: 0 auto;
+            width: 250px;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+        }
+        label {
+            display: inline-block;
+            width: 80px;
+            text-align: left;
+        }
+        input {
+            font-size: 1em;
+            padding: 0.2em;
+            margin: 0.2em;
+        }
+        button {
+            padding: 0.5em;
+            margin-top: 1em;
+        }
+        #bookList {
+            margin: 20px auto;
+            width: 80%;
+            border-collapse: collapse;
+        }
+        #bookList th, #bookList td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        #bookList th {
+            background-color: #f4f4f4;
+        }
