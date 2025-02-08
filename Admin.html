@@ -37,7 +37,7 @@
         <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="Addbook.html">New Books</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="login.html">LogOut</a></li>
         </ul>
     </nav>
     <form id="searchForm">
@@ -74,7 +74,6 @@
         </form>
     </div>
     <div id="modalOverlay" class="modal-overlay" style="display: none;"></div>
-
     <script>
         function displayFeedback(message, isError = false) {
             const feedback = document.getElementById('feedback');
@@ -114,7 +113,6 @@
                 displayFeedback('Unable to fetch books.', true);
             }
         }
-
         function openUpdateModal(id, title, author, description, year, price) {
             const modal = document.getElementById('updateModal');
             const overlay = document.getElementById('modalOverlay');
